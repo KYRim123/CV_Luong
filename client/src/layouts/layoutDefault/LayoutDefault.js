@@ -1,13 +1,16 @@
 import React from 'react'
 import './layoutDefaultStyle.scss'
 
+
+//component 
+import Sidebar from '../../components/Sidebar'
+
 function LayoutDefault({children}) {
   return (
-    <div>
-      header
+    <article className='container grid wide'>
+      <Sidebar />
       {children}
-      footer
-    </div>
+    </article>
   )
 }
 
