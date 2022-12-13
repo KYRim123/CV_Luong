@@ -9,7 +9,10 @@ function LayoutDefault({children}) {
   return (
     <article className='container grid wide'>
       <Sidebar />
+      <div>
       {children}
+        content
+      </div>
     </article>
   )
 }

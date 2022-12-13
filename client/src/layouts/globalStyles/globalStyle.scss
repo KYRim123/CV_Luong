@@ -3,6 +3,10 @@
 :root {
     --color-body: #121212;
     --color-bg: #1e1e1f;
+    --color-bg2: #404043;
+    --radius-20: 20px; 
+    --title-color: #fff; 
+    --text-color: #fff;
 }
 
 * {
@@ -10,6 +14,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style-type: none;
+    text-decoration: none;
 }
 
 html {
@@ -26,6 +31,11 @@ body {
     background-color: var(--color-body);
 }
 
+img {
+    height: auto;
+    max-width: 100%;
+}
+
 .wide {
     max-width: 120rem;
     width: 100%;
@@ -34,4 +44,14 @@ body {
 
 .grid {
     display: grid;
+}
+.title {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 500;
+}
+.box  {
+    display: block;
+    border-radius: var(--radius-20);
+    background-color: var(--color-bg);
 }
