@@ -4,14 +4,15 @@ import './layoutDefaultStyle.scss'
 
 //component 
 import Sidebar from '../../components/Sidebar'
+import Navbar from '../../components/navbar/Navbar'
 
 function LayoutDefault({children}) {
   return (
     <article className='container grid wide'>
       <Sidebar />
-      <div>
+      <div className='content box'>
+        <Navbar />
       {children}
-        content
       </div>
     </article>
   )

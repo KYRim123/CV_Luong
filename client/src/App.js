@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import LayoutDefault from './layouts/layoutDefault/LayoutDefault'
 import { routesPublic } from './routes'

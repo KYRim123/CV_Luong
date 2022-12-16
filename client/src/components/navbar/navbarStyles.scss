@@ -1,0 +1,30 @@
+.nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 50rem;
+    width: 100%;
+    padding: 0 3.5rem;
+    background-color: var(--color-bg2);
+    border-radius: 0 var(--radius-20) 0 var(--radius-20);
+    z-index: var(--z-index-nav);
+    .nav__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            color:  var(--text-color);
+            font-size: var(--font-size-18);
+            padding: 2rem 0;
+            cursor: pointer;
+            transition: transform .2s;
+            &:hover {
+                transform: translateY(-2px);
+                opacity: 0.8;
+            }
+        }
+        .active {
+            color: var(--color-accent);
+        }
+    }
+}

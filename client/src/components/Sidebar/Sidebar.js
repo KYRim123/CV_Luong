@@ -8,6 +8,8 @@ import { faMobileScreenButton, faMapLocationDot } from '@fortawesome/free-solid-
 
 import "./sidebarStyles.scss"
 
+import icons from '../../assets/icons'
+
 function Sidebar() {
     const contact = [
         { icon: faEnvelope, name: 'Email', nameLink: 'luong7002351@gmail.com', href: 'mailto:luong7002351@gmail.com' },
@@ -33,7 +35,7 @@ function Sidebar() {
                         {
                             contact.map((item, index) => (
                                 <li key={index} className="deatails--infor__item">
-                                    <span className='item__icon'>
+                                    <span className='item__icon box--icon'>
                                         <FontAwesomeIcon icon={item.icon} />
                                     </span>
                                     <div className="infor--contacts">
@@ -45,7 +47,12 @@ function Sidebar() {
                         }
                     </ul>
                     <div className="socialMedia">
-                        facebook
+                        <a href="">
+                            <img src={icons.facebook} alt="facebook"  className='icon'/>
+                        </a>
+                        <a href="">
+                            <img src={icons.instagram} alt="facebook"  className='icon'/>
+                        </a>
                     </div>
                 </div>
             </div>

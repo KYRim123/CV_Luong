@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300;0,500;0,600;1,400&display=swap');
 
 :root {
+    //color
     --color-body: #121212;
-    --color-bg: #1e1e1f;
+    --color-accent: #ffd154;
+    --color-bg: #1d1d1d;
     --color-bg2: #404043;
+    --color-border: rgb(110, 106, 106);
+    //radius
     --radius-20: 20px; 
-    --title-color: #fff; 
+    //text
+    --title-color: #FFF; 
     --text-color: #fff;
+    //shadow
+    --box-shadow-1: 0px 4px 5px rgba(104, 99, 99, 0.25);
+    //font  size
+    --font-size-18: 1.8rem;
+    --font-size-25: 2.5rem;
+    //z index
+    --z-index-nav: 10;
 }
 
 * {
@@ -46,12 +58,25 @@ img {
     display: grid;
 }
 .title {
-    font-size: 2rem;
+    font-size: var(--font-size-25);
     color: var(--title-color);
-    font-weight: 500;
+    font-weight: 600;
 }
 .box  {
     display: block;
     border-radius: var(--radius-20);
     background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+.box--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 2rem;
+    background-color: var(--color-bg);
+    margin-right: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-1);
 }
