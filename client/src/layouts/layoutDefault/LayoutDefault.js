@@ -3,8 +3,8 @@ import './layoutDefaultStyle.scss'
 
 
 //component 
-import Sidebar from '../../components/Sidebar'
-import Navbar from '../../components/navbar/Navbar'
+import Sidebar from '../Sidebar'
+import Navbar from '../navbar'
 
 function LayoutDefault({children}) {
   return (

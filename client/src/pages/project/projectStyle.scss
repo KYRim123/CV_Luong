@@ -1,0 +1,10 @@
+.project__list {
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    .project__item {
+        img {
+            height: 20rem;
+            border-radius: 8px;
+        }
+    }
+}
