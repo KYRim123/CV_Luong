@@ -12,7 +12,9 @@ function LayoutDefault({children}) {
       <Sidebar />
       <div className='content box'>
         <Navbar />
-      {children}
+        <div className="content__container">
+          {children}
+        </div>
       </div>
     </article>
   )

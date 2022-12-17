@@ -1,8 +1,11 @@
 .container {
     grid-template-columns: 30rem auto;
-    padding: 6.2rem 0;
     column-gap: 2rem;
+    padding: 1.7rem 0;
     .content {
         position: relative;
+    }
+    .content__container {
+        padding: 3rem;
     }
 }

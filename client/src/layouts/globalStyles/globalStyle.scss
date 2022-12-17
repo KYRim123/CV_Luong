@@ -4,16 +4,18 @@
     //color
     --color-body: #121212;
     --color-accent: #ffd154;
+    --color-line: #fff;
     --color-bg: #1d1d1d;
     --color-bg2: #404043;
     --color-border: rgb(110, 106, 106);
+    --color-white: #fff;
     //radius
-    --radius-20: 20px; 
+    --radius-20: 20px;
     //text
-    --title-color: #FFF; 
-    --text-color: #fff;
+    --title-color: #f0f0f0;
+    --text-color: #f0f0f0;
     //shadow
-    --box-shadow-1: 0px 4px 5px rgba(104, 99, 99, 0.25);
+    --box-shadow-1: 3.4px 3px 7.6px rgb(69 68 67);
     //font  size
     --font-size-18: 1.8rem;
     --font-size-25: 2.5rem;
@@ -32,10 +34,14 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-transform: capitalize;
     font-family: 'Rasa', serif;
     font-weight: 300;
@@ -57,17 +63,20 @@ img {
 .grid {
     display: grid;
 }
+
 .title {
     font-size: var(--font-size-25);
-    color: var(--title-color);
+    color: var(--color-accent);
     font-weight: 600;
 }
-.box  {
+
+.box {
     display: block;
     border-radius: var(--radius-20);
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
 }
+
 .box--icon {
     display: inline-flex;
     align-items: center;
@@ -76,7 +85,41 @@ img {
     width: 3.5rem;
     padding: 2rem;
     background-color: var(--color-bg);
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     border-radius: 8px;
     box-shadow: var(--box-shadow-1);
+    color: var(--color-accent);
+    font-size: var(--font-size-18);
 }
+
+.line {
+    display: block;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--color-line);
+    border-radius: 3px;
+    margin: 0.5rem 0 1rem;
+}
+
+.page__container {
+    height: 86vh;
+    overflow-y: scroll;
+}
+.borderLeft {
+    position: relative;
+        margin-top: 1.5rem;
+        border-left: 1px solid var(--color-accent);
+        &::before {
+            position: absolute;
+            content: "";
+            height: 0.8rem;
+            width: 0.8rem;
+            background-color: var(--color-white);
+            top: 45%;
+            left: -5px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0.25rem rgb(255 219 110 / 10%);
+        }
+}
+
+ 

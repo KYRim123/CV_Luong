@@ -1,0 +1,36 @@
+.education__container,
+.skills__container {
+    margin-top: 2rem;
+}
+
+.education__title,
+.skills__title {
+    display: inline-flex;
+    align-items: center;
+}
+
+.education__container {
+    .timeLine__item {
+        span {
+            color: var(--color-accent);
+        }
+        .timeLine__title {
+            color: var(--text-color);
+        }
+    }
+}
+
+.timeLine__item,
+.language__container,
+.other__container,
+.framework__container {
+    margin-left: 2rem;
+    padding-left: 3.3rem;
+    h3 {
+        opacity: .5;
+        color: var(--text-color);
+    }
+    span {
+        color: var(--text-color);
+    }
+}

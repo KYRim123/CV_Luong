@@ -13,7 +13,7 @@ import icons from '../../assets/icons'
 function Sidebar() {
     const contact = [
         { icon: faEnvelope, name: 'Email', nameLink: 'luong7002351@gmail.com', href: 'mailto:luong7002351@gmail.com' },
-        { icon: faMobileScreenButton, name: 'Phone', nameLink: '0123456789', href: 'tell:0123456789' },
+        { icon: faMobileScreenButton, name: 'Phone', nameLink: '+84: 397002351', href: 'tel:0397002351' },
         { icon: faCalendar, name: 'Birthday', nameLink: 'January 16 2001', href: '/' },
         { icon: faMapLocationDot, name: 'Location', nameLink: 'Quang Nam, Viet Nam', href: '/' },
     ]
