@@ -13,7 +13,7 @@
     --radius-20: 20px;
     //text
     --title-color: #f0f0f0;
-    --text-color: #f0f0f0;
+    --text-color: #bdb6b6;
     //shadow
     --box-shadow-1: 3.4px 3px 7.6px rgb(69 68 67);
     //font  size
@@ -49,6 +49,7 @@ body {
     background-color: var(--color-body);
 }
 
+
 img {
     height: auto;
     max-width: 100%;
@@ -66,7 +67,7 @@ img {
 
 .title {
     font-size: var(--font-size-25);
-    color: var(--color-accent);
+    color: var(--title-color);
     font-weight: 600;
 }
 

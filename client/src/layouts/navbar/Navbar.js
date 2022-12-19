@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from "react-router-dom"
+import { ChangeTheme } from '../../components/ChangeTheme/ChangeTheme'
 import "./navbarStyles.scss"
 
 function Navbar() {
   const [navIndex, setNavIndex] = useState(0)
-
 
   const navList = [
     { to: "/", name: "about"},
@@ -12,33 +12,46 @@ function Navbar() {
     { to: "/project", name: "project"},
   ]
   
-  // useEffect(() => {
-  //   const index = JSON.parse(localStorage.getItem("navIndex"))
-  //   setNavIndex(index)
-  // }, [])
+  useEffect(() => {
+    //get vi tri the nav
+    const index = JSON.parse(localStorage.getItem("navIndex")) || navIndex
+    setNavIndex(index)
 
-  // const localStorageNavIndex = (e) => {
-  //   const navIndex = e.target.getAttribute("index")
-  //   localStorage.setItem("navIndex", JSON.stringify(navIndex))
-  // }
+    //nav active
+    const navItems = document.querySelectorAll(".nav__item")
+    navItems[index].classList.add("active")
+    console.log("nav local" + navIndex);
+  }, [navIndex])
+
+  const handleNavIndex =  (e) => {
+    const index = e.target.getAttribute("index")
+    setNavIndex(index)
+    //gan vi tri nav vao local storage
+    localStorage.setItem("navIndex", JSON.stringify(index))
+    //remove vitri nav truoc do
+    document.querySelectorAll(".nav__item")[navIndex].classList.remove("active")
+    console.log("nav handle" + navIndex);
+  }
 
   return (
     <nav className='nav'>
       <ul className="nav__list">
         {
           navList.map((item, index) => (
-            <li key={index} className={`nav__item ${navIndex === index ? 'active':''}`}>
+            <li key={index} className={`nav__item`}>
               <Link 
                 index={index} 
                 to={item.to} 
                 className='nav__item--link' 
-                onClick={() => setNavIndex(index)}
+                onClick={handleNavIndex}
               >
                 {item.name}
               </Link>
             </li>
           ))
         }
+        {/* change theme */}
+        <ChangeTheme/>
       </ul>
     </nav>
   )
