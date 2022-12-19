@@ -1,16 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import "./navbarStyles.scss"
 
 function Navbar() {
   const [navIndex, setNavIndex] = useState(0)
 
+
   const navList = [
     { to: "/", name: "about"},
     { to: "/resume", name: "resume"},
     { to: "/project", name: "project"},
-    { to: "/", name: "contact"},
   ]
+  
+  // useEffect(() => {
+  //   const index = JSON.parse(localStorage.getItem("navIndex"))
+  //   setNavIndex(index)
+  // }, [])
+
+  // const localStorageNavIndex = (e) => {
+  //   const navIndex = e.target.getAttribute("index")
+  //   localStorage.setItem("navIndex", JSON.stringify(navIndex))
+  // }
 
   return (
     <nav className='nav'>
@@ -18,7 +28,14 @@ function Navbar() {
         {
           navList.map((item, index) => (
             <li key={index} className={`nav__item ${navIndex === index ? 'active':''}`}>
-              <Link index={index} to={item.to} className='nav__item--link' onClick={() => {setNavIndex(index)}}>{item.name}</Link>
+              <Link 
+                index={index} 
+                to={item.to} 
+                className='nav__item--link' 
+                onClick={() => setNavIndex(index)}
+              >
+                {item.name}
+              </Link>
             </li>
           ))
         }

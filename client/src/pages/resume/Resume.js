@@ -21,7 +21,7 @@ function Resume() {
   const other = [
     {name: "figma to reactjs", icon: ""},
     {name: "responsive(mobile, tablet, pc)", icon: ""},
-    {name: "Testing and Debugging.", icon: ""},
+  
   ]
 
 
