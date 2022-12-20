@@ -1,11 +1,11 @@
 .nav {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -1px;
     max-width: 50rem;
     width: 100%;
     padding: 0 3.5rem;
-    background-color: var(--color-bg2);
+    background-color: var(--color-accent);
     border-radius: 0 var(--radius-20) 0 var(--radius-20);
     z-index: var(--z-index-nav);
 
@@ -34,7 +34,7 @@
 
         .active {
             .nav__item--link {
-                color: var(--color-accent);
+                color: var(--color-active);
             }
         }
     }

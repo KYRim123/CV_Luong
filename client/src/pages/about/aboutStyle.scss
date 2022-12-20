@@ -1,5 +1,8 @@
 .about {
     text-transform: none;
+    .about__description {
+        font-size: var(--font-size-20);
+    }
    .goals, .skills {
     margin-top: 2rem;
    }

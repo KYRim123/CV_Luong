@@ -26,11 +26,11 @@
 .framework__container {
     margin-left: 2rem;
     padding-left: 3.3rem;
-    h3 {
-        opacity: .5;
+    font-size: var(--font-size-20);
+    h3, span {
         color: var(--text-color);
     }
-    span {
-        color: var(--text-color);
+    h3 {
+        opacity: .5;
     }
 }

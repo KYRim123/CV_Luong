@@ -25,7 +25,7 @@ function Sidebar() {
                         <img src={avatar} alt="avatar" />
                     </div>
                     <div className="name">
-                        <h3 className='title'>Nguyen Thanh Luong</h3>
+                        <h3>Nguyen Thanh Luong</h3>
                         <div>front end developer</div>
                     </div>
                 </div>

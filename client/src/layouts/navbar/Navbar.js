@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import { ChangeTheme } from '../../components/ChangeTheme/ChangeTheme'
 import "./navbarStyles.scss"
 
 function Navbar() {
-  const [navIndex, setNavIndex] = useState(0)
+  const [navIndex, setNavIndex] = useState()
 
   const navList = [
     { to: "/", name: "about"},
@@ -14,13 +14,12 @@ function Navbar() {
   
   useEffect(() => {
     //get vi tri the nav
-    const index = JSON.parse(localStorage.getItem("navIndex")) || navIndex
+    const index = JSON.parse(localStorage.getItem("navIndex")) || 0
     setNavIndex(index)
 
     //nav active
     const navItems = document.querySelectorAll(".nav__item")
     navItems[index].classList.add("active")
-    console.log("nav local" + navIndex);
   }, [navIndex])
 
   const handleNavIndex =  (e) => {
@@ -30,9 +29,7 @@ function Navbar() {
     localStorage.setItem("navIndex", JSON.stringify(index))
     //remove vitri nav truoc do
     document.querySelectorAll(".nav__item")[navIndex].classList.remove("active")
-    console.log("nav handle" + navIndex);
   }
-
   return (
     <nav className='nav'>
       <ul className="nav__list">
