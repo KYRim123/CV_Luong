@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faMoon, faSun} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import "./themeStyles.scss"
 
 export function ChangeTheme() {
-    const [iconTheme, setIconTheme] = useState(faSun)
-  
-    useEffect(() => {
-      iconTheme !== faSun ? document.body.classList.add("lightTheme") : document.body.classList.remove("lightTheme")
-    }, [iconTheme])
+  const [iconTheme, setIconTheme] = useState(faMoon)
+  const [reload, setReload] = useState(true)
 
-    const handleChangeTheme = () => {
-      iconTheme === faSun ? setIconTheme(faMoon):setIconTheme(faSun)
-    }
-    
-    return (
-        <div className='changeTheme' onClick={handleChangeTheme}>
-          <FontAwesomeIcon icon={iconTheme}/>
-        </div>
-      )
+  useEffect(() => {
+    const themeLocal = JSON.parse(localStorage.getItem("select-theme")) || iconTheme
+    setIconTheme(themeLocal)
+    themeLocal.iconName === "moon" ? document.body.classList.add("lightTheme"):
+    document.body.classList.remove("lightTheme")
+  }, [reload])
+
+  const handleChangeTheme =() => {
+    let currentIcon;  
+    iconTheme.iconName === "moon" ? currentIcon = faSun : currentIcon = faMoon
+    localStorage.setItem("select-theme", JSON.stringify(currentIcon))
+    setReload(!reload)
+  }
+  return (
+    <div className='changeTheme' onClick={handleChangeTheme}>
+      <FontAwesomeIcon icon={iconTheme} />
+    </div>
+  )
 }
 
 
