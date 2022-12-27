@@ -4,6 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './layouts/globalStyles'
 
+import "./layouts/globalStyles/responsive.scss"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  

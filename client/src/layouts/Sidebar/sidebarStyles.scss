@@ -1,9 +1,9 @@
 .sidebar {
+    position: relative;
     background-color: var(--color-accent);
 }
 .sidebar--container {
     padding: 3rem;
-
     .avatar {
         margin: 4rem auto 2rem;
         width: 17rem;

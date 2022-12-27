@@ -1,11 +1,8 @@
 
-
-// mobile tablet 
-@media  (min-width: 740px) and  (max-width: 1023px){
-    .nav {
-        position: relative;
-        max-width: 100%;
-        border-radius: var(--radius-20) var(--radius-20) 0 0;
+//mobile tablet 
+@media (max-width: 1022px) {
+    .container {
+        padding: 2rem;
     }
     .project__list {
         grid-template-columns: auto;
@@ -13,6 +10,51 @@
             img {
                 height: auto;
             }
+        }
+    }
+}
+//table pc 
+@media (min-width: 740px) {
+    .menu--icon {
+        display: none;
+    }
+}
+// tablet 
+@media  (min-width: 740px) and  (max-width: 1023px){
+    .nav {
+        position: relative;
+        max-width: 100%;
+        border-radius: var(--radius-20) var(--radius-20) 0 0;
+    }
+}
+// mobile 
+@media (max-width: 739px) {
+    .nav {
+        border-radius: var(--radius-20) var(--radius-20) 0 0;
+    }
+    .container {
+        grid-template-columns: auto;
+    }
+    .content {
+        display: none;
+        position: absolute !important; 
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    .content.active {
+        display: block;
+    }
+    .menu--icon {
+        z-index: 100;
+        position: fixed;
+        right: 0;
+        top: 1rem;
+        cursor: pointer;
+        transition: transform .2s;
+        &:hover {
+            transform: translateY(-0.5rem);
         }
     }
 }

@@ -10,7 +10,7 @@ function LayoutDefault({children}) {
   return (
     <article className='container grid wide'>
       <Sidebar />
-      <div className='content box'>
+      <div className='box content'>
         <Navbar />
         <div className="content__container">
           {children}
