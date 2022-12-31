@@ -1,6 +1,9 @@
 .sidebar {
     position: relative;
     background-color: var(--color-accent);
+    .menu--icon {
+        display: none;
+    }
 }
 .sidebar--container {
     padding: 3rem;

@@ -21,7 +21,7 @@ export function ChangeTheme() {
     setReload(!reload)
   }
   return (
-    <div className='changeTheme' onClick={handleChangeTheme}>
+    <div className='changeTheme buttonIcon' onClick={handleChangeTheme}>
       <FontAwesomeIcon icon={iconTheme} />
     </div>
   )

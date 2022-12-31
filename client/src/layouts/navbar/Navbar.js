@@ -1,8 +1,7 @@
-import { fa0, faClose } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import { ChangeTheme } from '../../components/ChangeTheme/ChangeTheme'
+import CloseContent from '../../components/CloseContent/CloseContent'
 import "./navbarStyles.scss"
 
 function Navbar() {
@@ -52,6 +51,8 @@ function Navbar() {
         }
         {/* change theme */}
         <ChangeTheme/>
+        {/* close content */}
+        <CloseContent/>
       </ul>
     </nav>
   )
